@@ -6,20 +6,43 @@
 <meta name="description" content="Roughly 155 characters">
 <link rel="stylesheet" type="text/css" href="mystyle.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script src="script.js"></script>
+
 </head>
 <body>
-        <div id="perfil"><img src="FondoFront.jpg"></div>
+     <div class="tarjeta maestra" id="primera-tarjeta">
+        <div id="fondo-perfil"><img src="FondoFront.jpg"></div>
+        <div id="info" style="padding: 16px"></div>
+                <div id="info-imagen">
+                        <img class="imagen-perfil redimension" src="RudyGay.jpg">
+                        <div class="btn-edit"><a href="#" class="btn-right"><i class="fa fa-pen"></i></a></div>
+                </div>
+        <div id="info-personal">
+        <div>
+                <h1>Valentin Perez</h1>
+                <div id="info-empresa">informatico en EPE</div>
+                <div id="info-contacto">
+                <span>Santa Fe (Argentina) </span>
+                <span><a href="#">Información de contacto</a></span>
+        </div>
+        </div>
+        <ul id="info-detalles">
+                <li><a href="#">
+                        <h2>EPE</h2>
+                        <img class="redimension" src="https://ecomo.com.ar/wp-content/uploads/2020/10/epe-factura-pdf.jpg">
+                <li><a href="#">
+                        <h2>Universidad de Santa Fe</h2>
+                        <img class="redimension" src="https://www.universidades.com.ar/logos/original/logo-universidad-catolica-de-santa-fe.webp">
+                </a></li>
+        </ul>
+        </div>
+        <div class="tarjeta maestra" id="acercade">ACerca De</div>
+        <div class="tarjeta maestra" id="experiencia">Experiencia</div>
+        <div class="tarjeta maestra" id="aptitudes">Actitudes</div>
+        <div class="tarjeta maestra" id="logros">Logros</div>
+     </div>
 
-        
-
-        <div id="acercade"></div>
-
-        <div id="experiencia"></div>
-
-        <div id="aptitudes"></div>
-
-        <div id="logros"></div>
+<script src="script.js"></script>
 
 </body>
+
 </html>

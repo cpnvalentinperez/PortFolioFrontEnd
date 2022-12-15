@@ -44,9 +44,7 @@ img {
 .bordocolor {
     border: 2px solid rgb(0, 0, 0);
     border-radius: 32px;
-    padding-bottom: 15px;
-    padding-left: 10px;
-    padding-right: 10px;
+   
 }
 
 .btn {

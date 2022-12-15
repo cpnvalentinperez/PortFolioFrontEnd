@@ -1,6 +1,7 @@
 .contenedor{
    width:1250px;
    height:100px;
+   border-radius: 32px;
 }
 
 .imgperfil {
@@ -42,12 +43,13 @@ img {
 
 .bordocolor {
     border: 2px solid rgb(0, 0, 0);
-    
+    border-radius: 32px;
 }
 
 .btn {
     display: inline-block;
     padding: 20px;
+    border-radius: 200px;
 }
 
 a{

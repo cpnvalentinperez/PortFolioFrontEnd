@@ -6,70 +6,79 @@
 <meta name="description" content="Roughly 155 characters">
 <link rel="stylesheet" type="text/css" href="stylo.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
 </head>
 <body>
-     
-        <div id="primera-tarjeta container-fluid" style="padding: 15px;">
-       
-        <div id="fondo-perfil container-fluid"><img class="contenedor bordocolor" src="FondoFront.jpg"></div>
-        
-        
+     <div id="primera-tarjeta">
+        <div id="fondo-perfil"><img class="contenedor bordocolor" src="FondoFront.jpg"></div>
         <!--<div id="info-personal"> -->
-        <div class="bordocolor">
-                <div class="heart"></div> 
+        <div id="info" class="bordocolor">
                 <div id="info-imagen" >
-                        
-                        <img class="imgperfil" style="padding-top:25px; padding-left: 15px" src="RudyGay.jpg"> 
-                        
-                <h1>Valentin Perez</h1>
-                <img class="imglogo" src="https://i1.wp.com/lavozcasilda.com.ar/wp-content/uploads/2020/07/Epe-logo.jpg"  style="padding-top:2px">
-                <img class="imglogo" src="https://www.universidades.com.ar/logos/original/logo-universidad-catolica-de-santa-fe.webp">
-                
-                <h3>Informatico en EPE</h3>
-                <span><h3>Santa Fe (Argentina)</h3></span>
-                        
-                     <div  id="info-contacto">
-                        <button type="button" class="btn btn-primary btn-sm" style="border-radius: 25rem"><i class="fa fa-edit"></i><h5>Editar</h5></button>
-                        <span style="padding:5px"><a href="#"><b>Información de contacto</b></a></span>
-                     </div>
+                     <img class="imgperfil" src="RudyGay.jpg"> 
                      
-                        <br>
-                        
-                        <div class="btn btn-outline-info" style="margin-left:35px;margin-bottom: 5px;border-radius: 25rem"><a href="#">Tengo Interes en<i></i></a></div>
-                        <div class="btn btn-outline-info" style="margin-left:10px;margin-bottom: 5px;border-radius: 25rem"><a href="#">Añadir Seccion<i></i></a></div>
-                        <div class="btn btn-outline-info" style="margin-left:10px;margin-bottom: 5px;border-radius: 25rem"><a href="#">Mas<i></i></a></div>
-                 </div>         
-        </div>
-        
-        <!-- <ul id="info-detalles">
-                <li><a href="/#">
+                     <div class="btn-edit"><a href="#" type="button" class="btn-right"><i class="fa fa-edit"></i></a></div>
+                </div>           
+                <div id="info-data">
+                  <div>      
+                    <h1>Valentin Perez</h1>
+                    <div id="info-empresa">Informatico en EPE</div>
+                    <div id="info-contacto">
+                        <span>Santa Fe (Argentina)</span>
+                        <span><a href="#"><b>Información de contacto</b></a></span>
+                    </div>
+                   </div>
+                <ul id="info-detalles">
+                   <li><a href="#">     
+                        <img class="imglogo" src="https://i1.wp.com/lavozcasilda.com.ar/wp-content/uploads/2020/07/Epe-logo.jpg" style="padding-top:2px">
                         <h2>EPE</h2>
-                        <img class="img.logo imglogo" src="https://ecomo.com.ar/wp-content/uploads/2020/10/epe-factura-pdf.jpg">
-                <li><a href="/#">
-                        <h2>Universidad de Santa Fe</h2>
-                        <img class=" img.logo imglogo" src="https://www.universidades.com.ar/logos/original/logo-universidad-catolica-de-santa-fe.webp">
-                </a></li>
-        </ul>
-        </div> -->
-        <div class="tarjeta maestra bordocolor" style="padding:15px" id="acercade">
-                <h1>Acerca de</h1>
-                
-                <!-- <div  id="info-estudio"> -->
-                <h3>Licenciado en NeuroCiencias</h3>
-                <!-- </div> -->
-                
+                   </a></li>
+                   <li><a href="#">     
+                        <img class="imglogo" src="https://www.universidades.com.ar/logos/original/logo-universidad-catolica-de-santa-fe.webp" style="padding-bottom:13px">
+                        <h2>UCSF</h2>
+                   </a></li>
+                </ul>
+                </div>
+                <div id="info-acciones">                        
+                        <button type="button" class="btn btn-outline-info">Tengo Interes en</button>
+                        <button type="button" class="btn btn-outline-info">Añadir Seccion</button>
+                        <button type="button" class="btn btn-outline-info">Mas</button>
+                </div>         
+           </div>
         </div>
-        <div class="tarjeta maestra bordocolor" id="experiencia" style="padding:15px"><h1>Experiencia</h1></div>
-        <div class="tarjeta maestra bordocolor" id="aptitudes" style="padding:15px"><h1>Actitudes</h1></div>
-        <div class="tarjeta maestra bordocolor" id="logros" style="padding:15px"><h1>Logros</h1</div>
+
+
+<script>
+        function cambiar_parrafo(){
+                document.getElementById("editar-acercade").style.display="block";
+                let texto = document.getElementById("texto-acercade").innerText;
+                console.log(texto);
+        };
+
+        function funcion2(valor){
+                document.getElementById("texto-acercade").innerText=valor;
+        };
+</script>
+
+<div class="tarjeta-maestra bordocolor">
+        <div class="tarjeta-titulo">
+                <h2>Acerca de</h2>
+                <div class="btn-edit" onclick="cambiar_parrafo()">
+                        <a href="#" class="btn-right"><i class="fa fa-pen"></i></a>
+                </div>                        
+        </div>
+        <div>
+                <p id="texto-acercade">Ingeniero en Ciertas Cosas</p> 
+        </div>
+        <div>
+                <input id="editar-acercade" type="text" oninput="funcion2"(this.value)" style="display:none"> 
+        </div>
+        </div>
+        <div class="tarjeta maestra bordocolor" id="aptitudes"><h1>Actitudes</h1></div>
+        <div class="tarjeta maestra bordocolor" id="logros"><h1>Logros</h1</div>
                               
         </div>
         
      
-<script src="script.js"></script>
 
 </body>
-
 </html>

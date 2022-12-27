@@ -1,84 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="espacio">
 <head>
 <meta charset="utf-8">
 <title>Web Full Stack</title>
 <meta name="description" content="Roughly 155 characters">
 <link rel="stylesheet" type="text/css" href="stylo.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://kit.fontawesome.com/591e521fe1.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
      <div id="primera-tarjeta">
-        <div id="fondo-perfil"><img class="contenedor bordocolor" src="FondoFront.jpg"></div>
+        <div id="fondo"><img class="contenedor" src="FondoFront.jpg"></div>
         <!--<div id="info-personal"> -->
         <div id="info" class="bordocolor">
                 <div id="info-imagen" >
                      <img class="imgperfil" src="RudyGay.jpg"> 
-                     
-                     <div class="btn-edit"><a href="#" type="button" class="btn-right"><i class="fa fa-edit"></i></a></div>
-                </div>           
-                <div id="info-data">
-                  <div>      
-                    <h1>Valentin Perez</h1>
+                </div>     
+                 <div class="btn-edit"><a href="#" type="button" class="btn-right">
+                        <i class="fa-solid fa-pen-to-square"></i></a>
+                </div>
+                           
+                <div id="info-data">         
+                        <h1>Valentin Perez</h1>                    
                     <div id="info-empresa">Informatico en EPE</div>
                     <div id="info-contacto">
                         <span>Santa Fe (Argentina)</span>
                         <span><a href="#"><b>Información de contacto</b></a></span>
                     </div>
-                   </div>
-                <ul id="info-detalles">
-                   <li><a href="#">     
-                        <img class="imglogo" src="https://i1.wp.com/lavozcasilda.com.ar/wp-content/uploads/2020/07/Epe-logo.jpg" style="padding-top:2px">
-                        <h2>EPE</h2>
-                   </a></li>
-                   <li><a href="#">     
-                        <img class="imglogo" src="https://www.universidades.com.ar/logos/original/logo-universidad-catolica-de-santa-fe.webp" style="padding-bottom:13px">
-                        <h2>UCSF</h2>
-                   </a></li>
-                </ul>
-                </div>
+                 </div>
+                    <ul id="info-detalles">
+                        <li><a href="#">     
+                                <!-- <h2>EPE</h2> -->
+                                <img class="imglogo" src="https://i1.wp.com/lavozcasilda.com.ar/wp-content/uploads/2020/07/Epe-logo.jpg">
+                        </a></li>
+                        <li><a href="#">     
+                                <!-- <h2>UCSF</h2> -->
+                                <img class="imglogo" src="https://www.universidades.com.ar/logos/original/logo-universidad-catolica-de-santa-fe.webp">
+                                </a></li>
+                    </ul>
                 <div id="info-acciones">                        
-                        <button type="button" class="btn btn-outline-info">Tengo Interes en</button>
-                        <button type="button" class="btn btn-outline-info">Añadir Seccion</button>
-                        <button type="button" class="btn btn-outline-info">Mas</button>
+                        <button type="button" class="btn-outline-info">Tengo Interes en</button>
+                        <button type="button" class="btn-outline-info">Añadir Seccion</button>
+                        <button type="button" class="btn-outline-info">Mas</button>
                 </div>         
            </div>
         </div>
-
-
-<script>
-        function cambiar_parrafo(){
-                document.getElementById("editar-acercade").style.display="block";
-                let texto = document.getElementById("texto-acercade").innerText;
-                console.log(texto);
-        };
-
-        function funcion2(valor){
-                document.getElementById("texto-acercade").innerText=valor;
-        };
-</script>
-
-<div class="tarjeta-maestra bordocolor">
-        <div class="tarjeta-titulo">
+        <script>
+                function cambiar_parrafo(){
+                        document.getElementById("editar-acercade").style.display="block";
+                        let texto = document.getElementById("texto-acercade").innerText;
+                        console.log(texto);
+                };
+        
+                function funcion2(valor){
+                        document.getElementById("texto-acercade").innerText=valor;
+                };
+        </script>  
+        <div class="tarjeta-maestra bordocolor">
+            <div class="btn-edit" class="tarjeta-titulo">
                 <h2>Acerca de</h2>
-                <div class="btn-edit" onclick="cambiar_parrafo()">
-                        <a href="#" class="btn-right"><i class="fa fa-pen"></i></a>
+                <div  onclick="cambiar_parrafo()">
+                        <a href="#" type="button" class="btn-right">
+                               <i class="fa-solid fa-pen-to-square"></i></a>
                 </div>                        
-        </div>
-        <div>
+            </div>
                 <p id="texto-acercade">Ingeniero en Ciertas Cosas</p> 
+                <input id="editar-acercade" type="text" oninput="funcion2(this.value)" style="display:none"> 
         </div>
-        <div>
-                <input id="editar-acercade" type="text" oninput="funcion2"(this.value)" style="display:none"> 
+        
+        <div class="tarjeta maestra bordocolor" id="aptitudes"><h1>Actitudes</h1>
+        
         </div>
-        </div>
-        <div class="tarjeta maestra bordocolor" id="aptitudes"><h1>Actitudes</h1></div>
-        <div class="tarjeta maestra bordocolor" id="logros"><h1>Logros</h1</div>
+        
+        <div class="tarjeta maestra bordocolor" id="logros"><h1>Logros</h1></div>
                               
         </div>
         
-     
+          
 
 </body>
 </html>

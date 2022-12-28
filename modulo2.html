@@ -15,11 +15,18 @@
         <!--<div id="info-personal"> -->
         <div id="info" class="bordocolor">
                 <div id="info-imagen" >
-                     <img class="imgperfil" src="RudyGay.jpg"> 
+                        
+                     <img id="imagen" class="imgperfil" src="RudyGay.jpg"> 
                 </div>     
-                 <div class="btn-edit"><a href="#" type="button" class="btn-right">
+                 <div class="btn-edit"><a href="#" type="button" class="btn-right" onclick="cambiarImagen()">
                         <i class="fa-solid fa-pen-to-square"></i></a>
+                        <!-- <div id="div_file">                                                    
+                                <input type="file" id="miInput">
+                                
+                        </div>          -->
                 </div>
+
+                
                            
                 <div id="info-data">         
                         <h1>Valentin Perez</h1>                    
@@ -46,17 +53,7 @@
                 </div>         
            </div>
         </div>
-        <script>
-                function cambiar_parrafo(){
-                        document.getElementById("editar-acercade").style.display="block";
-                        let texto = document.getElementById("texto-acercade").innerText;
-                        console.log(texto);
-                };
-        
-                function funcion2(valor){
-                        document.getElementById("texto-acercade").innerText=valor;
-                };
-        </script>  
+     
         <div class="tarjeta-maestra bordocolor">
             <div class="btn-edit" class="tarjeta-titulo">
                 <h2>Acerca de</h2>
@@ -67,17 +64,84 @@
             </div>
                 <p id="texto-acercade">Ingeniero en Ciertas Cosas</p> 
                 <input id="editar-acercade" type="text" oninput="funcion2(this.value)" style="display:none"> 
+
+                <input type="file" id="archivo1" onchange="showFile(this)">
         </div>
+
         
-        <div class="tarjeta maestra bordocolor" id="aptitudes"><h1>Actitudes</h1>
         
+        <div class="tarjeta maestra bordocolor" id="aptitudes">
+                <div class="btn-edit" class="tarjeta-titulo">
+                <h1>Actitudes</h1>
+                <div  onclick="">
+                        <a href="#" type="button" class="btn-right">
+                               <i class="fa-solid fa-pen-to-square"></i></a>                               
+                </div>  
+                </div>
         </div>
+        <div class="tarjeta maestra bordocolor" id="logros">
+                <div class="btn-edit" class="tarjeta-titulo">
+                <h1>Logros</h1>
+                <div  onclick="">
+                        <a href="#" type="button" class="btn-right">
+                               <i class="fa-solid fa-pen-to-square"></i></a> 
+                </div>                  
+                </div>
+        </div>          
+        <script>
+                function cambiar_parrafo(){
+                        document.getElementById("editar-acercade").style.display="block";
+                        let texto = document.getElementById("texto-acercade").innerText;
+                        console.log(texto);
+                };
         
-        <div class="tarjeta maestra bordocolor" id="logros"><h1>Logros</h1></div>
-                              
-        </div>
+                function funcion2(valor){
+                        document.getElementById("texto-acercade").innerText=valor;
+                };
+                
+                function logMessage(message){
+                        console.log(message + "<br>");
+                }
         
-          
+                //controla si se presiono un enter
+
+                let textarea = document.getElementById("editar-acercade")
+                textarea.addEventListener('keyup', (e) => {
+                        logMessage(`Key "${e.key}" released [event: keyup]`);
+                        if (e.key=="Enter"){
+                                document.getElementById("editar-acercade").style.display="none"
+                        }
+                });
+
+                //Funcion para cambiar Imagen
+                // function cambiarImagen(){
+                //         document.getElementById("miImput").click();
+                // }
+
+                // document.getElementById("miImput").addEventListener("change", function(){
+                //         var imagen = document.getElementById("miImagen");
+                //         imagen.src = URL.createObjectURL(this.files[0]);
+                // });
+
+                //Carga el contendio de un archivo de texto y lo muestra en el parrafo
+                function showFile(input){
+                        let file = input.files[0];
+                        alert(`Nombre archivo: ${file.name}`);
+                        alert(`Ultima modificacion: ${file.lastModified}`);
+                        
+                        let reader = new FileReader();
+                        reader.readAsText(file);
+                        reader.onload = function(){
+                                console.log(reader.result);
+                                document.getElementById("texto-acercade").innerText=reader.result;
+                        };
+                        reader.onerror = function(){
+                                console.log(reader.error);
+                        };
+                }
+
+
+        </script> 
 
 </body>
 </html>

@@ -74,6 +74,51 @@ img {
     border: 2px solid black;
 }
 
+input#miInput{
+    position:absolute;
+	top:0px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	width:100%;
+	height:100%;
+	opacity: 0;
+}
+
+p#texto{
+	text-align: center;
+	color:white;
+}
+
+div#div_file{
+	position: relative;
+    display: inline-block;
+}
+
+div#div_file::before{
+    background-color: #17a2b8;
+    color: #ebecee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    content: 'Seleccionar Foto Perfil'; /* testo por defecto */
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+div#div_file input[type="file"]{
+    opacity: 0;
+  width: 400px;
+  height: 52px;
+  display: inline-block;
+}
+
+
+
 a{
     color:black;
 }
